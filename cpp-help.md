@@ -489,4 +489,9 @@ Account *accounts{nullptr};
 accounts = new Account;
 
 delete accounts;
+---------
+## Shallow and deep copy constructor
+Do deep copy when ever the object contains raw pointers.
+instead of copying variable do copy by pointer variable by new pointer storage in heap.
+
 

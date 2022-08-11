@@ -29,3 +29,12 @@ git status
 git commit -m "first commit"
 git remote add origin https://github.com/DasarathanSampath/cpp.git
 git push -u origin main
+
+
+## commit local files - rebase - get latest
+
+commit all changes
+
+git pull origin main --rebase //get all the latest files from remote and rebase it
+
+

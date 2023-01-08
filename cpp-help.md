@@ -1,4 +1,4 @@
-# To compile files from comman lins
+# To compile files from command lines
 >g++ -Wall -std=c++20 main.cpp -o main.exe
 
 -Wall => enable warnings

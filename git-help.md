@@ -38,3 +38,18 @@ commit all changes
 git pull origin main --rebase //get all the latest files from remote and rebase it
 
 
+## To remove large file from commit
+
+To remove a file from "heatsink/heatsink2mm/animation6.avi"
+
+git status
+
+git add --all
+
+git rm heatsink/heatsink2mm/animation6.avi
+
+git filter-branch --force --index-filter 'git rm --cached --ignore-unmatch heatsink/heatsink2mm/animation6.avi' --prune-empty --tag-name-filter cat -- --all
+
+git reset --hard origin/main
+=> force push -f is required when we do rebase
+git push -f origin main

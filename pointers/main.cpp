@@ -4,6 +4,20 @@
 
 using namespace std;
 
+class myClass {
+    private:
+        int a;
+    public:
+        void set(int a) {
+            this -> a = a;
+        }
+        int get();
+};
+
+int myClass::get() {
+    return a;
+};
+
 int main(int argc, char **argv) {
 
     int *ptr2;
@@ -83,4 +97,12 @@ int main(int argc, char **argv) {
     cout << "&b is: " << &b << endl;
     cout << endl; */
 
+    myClass myObj;
+    myObj.set(10);
+    myClass* p = &myObj; //pointer
+    myClass& r = myObj;
+
+    cout << "myObj: " << &myObj << endl;
+    cout << "p: " << p << endl;
+    cout << "&r: " << &r << endl;
 }
